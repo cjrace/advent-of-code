@@ -1,7 +1,11 @@
 import pandas as pd
+import os
 
 # Read input data
-with open('day1_input.txt', 'r') as file:
+script_dir = os.path.dirname(__file__)
+input_file_path = os.path.join(script_dir, 'day1_input.txt')
+
+with open(input_file_path, 'r') as file:
     input_data = file.read()
 
 lines = input_data.strip().split('\n')
