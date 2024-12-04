@@ -12,7 +12,7 @@ Plan is to run through the most popular languages (or at least open source ones 
 |------|-------------------|------|----------|
 | 1    | Python 3          | 1225 | Yes      | 
 | 2    | Rust              | 530  | Yes      |
-| 3    | JavaScript        | 237  | |
+| 3    | JavaScript        | 237  | Yes      |
 | 4    | C++               | 235  | |
 | 5    | C#                | 230  | |
 | 6    | Java              | 182  | |
@@ -42,13 +42,17 @@ Plan is to run through the most popular languages (or at least open source ones 
 To run day one's script, ensure you:
 1. [Install Python](https://www.python.org/downloads/)
 2. Install any dependencies using `pip install ...`
-
-Then use VSCode to easily run the script.
+3. `python 2024/day1.py`
 
 # Day 2 - Rust
 
 I used `cargo new ...` to create a project folder, then edited the `main.rs` script.
 
 1. [Install Rust](https://www.rust-lang.org/tools/install)
-2. Open terminal within rust project e.g. `cd day2_rust`
+2. Open terminal within rust project e.g. `cd 2024/day2_rust`
 2. `cargo run`
+
+# Day 3 - JavaScript
+
+1. [Install npm](https://nodejs.org/en/download/package-manager)
+2. `node 2024/day3.js`
