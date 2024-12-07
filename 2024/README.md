@@ -49,10 +49,16 @@ To run day one's script, ensure you:
 I used `cargo new ...` to create a project folder, then edited the `main.rs` script.
 
 1. [Install Rust](https://www.rust-lang.org/tools/install)
-2. Open terminal within rust project e.g. `cd 2024/day2_rust`
+2. Navigate into rust project `cd 2024/day2_rust`
 2. `cargo run`
 
 # Day 3 - JavaScript
 
 1. [Install npm](https://nodejs.org/en/download/package-manager)
 2. `node 2024/day3.js`
+
+# Day 4 - C++
+
+1. [Install compiler](https://code.visualstudio.com/docs/cpp/config-mingw)
+2. Navigate into folder `cd 2024`
+3. Compile and run `g++ .\day4.cpp -o .\day4.exe; .\day4.exe`
