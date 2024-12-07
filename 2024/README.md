@@ -2,7 +2,7 @@
 
 Following along with the challenges on [adventofcode.com](https://adventofcode.com/).
 
-Decided (for better or for worse) to try to cycle around a range of languages, testing how well I logic the puzzle and use GitHub Copilot within VSCode to help me figure out the syntax for what I want to write across different languages. Coming at it from an R background I'm assuming it might be trickier than I expect to translate the way I program in R to other languages, and doing it as a way to expose myself to a range of different ways of approaching code very quickly.
+Decided (for better or for worse) to try to cycle around a range of languages, testing how well I logic the puzzle and use GitHub Copilot within VSCode to help me figure out the syntax for what I want to write across different languages. Coming at it from an R background I'm assuming it might be trickier than I expect to translate the way I program in R to other languages. Doing it as a way to expose myself to a range of different ways of approaching code very quickly.
 
 Plan is to run through the most popular languages (or at least open source ones that I can easily install and run within VSCode) in order until I fail a day (or until I decide it's a silly idea) and then revert to cycling between R (what I know best), Python and TypeScript (what I'm currently learning in other projects).
 
@@ -13,7 +13,7 @@ Plan is to run through the most popular languages (or at least open source ones 
 | 1    | Python 3          | 1225 | Yes      | 
 | 2    | Rust              | 530  | Yes      |
 | 3    | JavaScript        | 237  | Yes      |
-| 4    | C++               | 235  | |
+| 4    | C++               | 235  | Yes      |
 | 5    | C#                | 230  | |
 | 6    | Java              | 182  | |
 | 7    | Go                | 160  | |

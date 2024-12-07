@@ -25,7 +25,7 @@ int main()
             pos = line.find("XMAS", pos + 4);
         }
     }
-    std::cout << "Number of xmas after step 1: " << xmas_count << std::endl;
+    // std::cout << "Number of xmas after step 1: " << xmas_count << std::endl;
 
     // Reset file stream to beginning
     file.clear();
@@ -41,7 +41,7 @@ int main()
             pos = line.find("SAMX", pos + 4);
         }
     }
-    std::cout << "Number of xmas after step 2: " << xmas_count << std::endl;
+    // std::cout << "Number of xmas after step 2: " << xmas_count << std::endl;
 
     // Reset file stream to beginning
     file.clear();
@@ -72,7 +72,7 @@ int main()
             pos = column.find("XMAS", pos + 4);
         }
     }
-    std::cout << "Number of xmas after step 3: " << xmas_count << std::endl;
+    // std::cout << "Number of xmas after step 3: " << xmas_count << std::endl;
 
     // Reset file stream to beginning
     file.clear();
@@ -104,7 +104,7 @@ int main()
         }
     }
 
-    std::cout << "Number of xmas after step 4: " << xmas_count << std::endl;
+    // std::cout << "Number of xmas after step 4: " << xmas_count << std::endl;
 
     // Reset file stream to beginning
     file.clear();
@@ -131,7 +131,7 @@ int main()
         }
     }
 
-    std::cout << "Number of xmas after step 5: " << xmas_count << std::endl;
+    // std::cout << "Number of xmas after step 5: " << xmas_count << std::endl;
 
     // Reset file stream to beginning
     file.clear();
@@ -158,7 +158,7 @@ int main()
         }
     }
 
-    std::cout << "Number of xmas after step 6: " << xmas_count << std::endl;
+    // std::cout << "Number of xmas after step 6: " << xmas_count << std::endl;
 
     // Reset file stream to beginning
     file.clear();
@@ -185,7 +185,7 @@ int main()
         }
     }
 
-    std::cout << "Number of xmas after step 7: " << xmas_count << std::endl;
+    // std::cout << "Number of xmas after step 7: " << xmas_count << std::endl;
 
     // Reset file stream to beginning
     file.clear();
@@ -213,6 +213,58 @@ int main()
     }
 
     std::cout << "Final count of xmas: " << xmas_count << std::endl;
+
+    // Reset file stream to beginning
+    file.clear();
+    lines.clear();
+    file.seekg(0, std::ios::beg);
+
+    // PART TWO ---------------------------------------------------------------
+    int mas_count = 0;
+
+    // Count number of MAS crosses in grid
+    while (std::getline(file, line))
+    {
+        lines.push_back(line);
+    }
+
+    num_lines = lines.size();
+    line_length = lines[0].size();
+
+    for (int row = 2; row <= num_lines - 1; ++row)
+    {
+        for (int col = 0; col <= line_length - 3; ++col)
+        {
+            if (lines[row][col] == 'S')
+            {
+                if (lines[row - 1][col + 1] == 'A' && lines[row - 2][col + 2] == 'M')
+                {
+                    if ((lines[row - 2][col] == 'S' && lines[row][col + 2] == 'M') ||
+                         (lines[row - 2][col] == 'M' && lines[row][col + 2] == 'S'))
+                    {
+                        mas_count++;
+                        // std::cout << "Found S at row: " << row << ", col: " << col << std::endl;
+                    }
+                }
+            }
+
+            if (lines[row][col] == 'M')
+            {
+                if (lines[row - 1][col + 1] == 'A' && lines[row - 2][col + 2] == 'S')
+                {
+                    if ((lines[row - 2][col] == 'S' && lines[row][col + 2] == 'M') ||
+                         (lines[row - 2][col] == 'M' && lines[row][col + 2] == 'S'))
+                    {
+                        mas_count++;
+                        // std::cout << "Found M at row: " << row << ", col: " << col << std::endl;
+                    }
+                }
+            }
+        }
+    }
+
+    std::cout << "Final count of x-mas: " << mas_count << std::endl;
+
     file.close();
     return 0;
 }

@@ -3,3 +3,7 @@
 
 # Rust ignore
 **/target/
+
+# C++ generates a tasks.json in .vscode
+.vscode/tasks.json
+*.exe
